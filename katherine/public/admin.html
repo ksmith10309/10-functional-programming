@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
     <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
+
+    <!-- Katherine: Set up a template for each row of the Author Stats section -->
+    <script id="author-template" type="text/x-handlebars-template">
+      <li>{{author}} has written {{numWords}} words</li>
+    </script>
+
   </head>
   <body>
     <header class="clearfix">
@@ -48,7 +54,8 @@
     <script src="scripts/article.js"></script>
     <script src="scripts/articleView.js"></script>
     <script>
-      Article.fetchAll();
+      // Katherine: Complete the Article.fetchAll() method so that it invokes a specific callback after all articles are loaded
+      app.Article.fetchAll(app.articleView.initAdminPage);
     </script>
   </body>
 </html>
